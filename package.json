@@ -1,0 +1,55 @@
+{
+  "name": "voiceclone-pro",
+  "version": "1.0.0",
+  "description": "Advanced Voice Cloning & Text-to-Speech Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -c-1",
+    "dev": "live-server --port=8000 --host=localhost",
+    "build": "echo 'Building for production...' && npm run minify",
+    "minify": "terser js/app.js -o js/app.min.js && cleancss -o css/style.min.css css/style.css",
+    "test": "echo 'Running tests...' && npm run lint",
+    "lint": "eslint *.js --fix",
+    "deploy": "gh-pages -d .",
+    "serve": "python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/voiceclone-pro.git"
+  },
+  "keywords": [
+    "voice-cloning",
+    "text-to-speech",
+    "tts",
+    "ai",
+    "speech-synthesis",
+    "voice-ai",
+    "audio-processing",
+    "web-audio-api",
+    "speech-recognition",
+    "nlp"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/voiceclone-pro/issues"
+  },
+  "homepage": "https://github.com/yourusername/voiceclone-pro#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "terser": "^5.15.0",
+    "clean-css-cli": "^5.6.0",
+    "gh-pages": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
